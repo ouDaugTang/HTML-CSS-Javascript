@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자</title>
+    <style>
+        h1 {
+            font-style: 2.5em;
+            color: #25a9bd;
+        }
+
+        section {
+            padding: 10px;
+            border: 5px solid orange;
+        }
+
+        /* : first-of-type - 첫 요소를 선택 */
+        section:first-of-type {
+            color: #cc2222;
+        }
+
+        /* : last-of-type - 마지막 요소를 선택 */
+        /* : ::first-letter 첫 글자를 선택 */
+        section:last-of-type::first-letter {
+            font-style: 2.4em;
+            float: left;
+            padding: 0;
+            margin: -1px 3px 0 0;
+            font-weight: bold;
+            color: orange;
+        }
+
+        section em {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        /* :before - 요소가 시작되기 전을 선택 */
+        section em::before {
+            content: '\"';
+            padding: 0.5em;
+            color: red;
+            font-weight: bold;
+            font-weight: 18;
+        }
+
+        /* :after - 요소가 끝난 다음을 선택 */
+        section em::after {
+            content: "\"";
+            padding: 0.5em;
+            color: red;
+            font-weight: bold;
+        }
+
+        /* :enabled - 활성화된 태그를 선택 */
+        input:enabled {
+            background-color: aqua;
+        }
+
+        /* :disenabled - 활성화된 태그를 선택 */
+        input:disenabled {
+            background-color: glay;
+        }
+
+        input::placeholder {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>가상 선택자</h1>
+    <section>
+        누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와
+        일시·장소가 지체없이 통지되어야 한다. 각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+    </section>
+    <section>
+        <em> 성공의 8할은 일단 출석하는 것이다. </em>
+        누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와
+        일시·장소가 지체없이 통지되어야 한다. 각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+    </section>
+    <section>
+        누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와
+        일시·장소가 지체없이 통지되어야 한다. 각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다.
+    </section>
+
+    <form action="">
+        <p>
+            <label for="">이름</label>
+            <input type="text">
+        </p>
+        <p>
+            <label for="">이메일</label>
+            <input type="text" placeholder="sample@mail.com" disabled>
+        </p>
+    </form>
+</body>
+
+</html>

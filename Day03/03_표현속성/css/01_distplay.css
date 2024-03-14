@@ -1,0 +1,64 @@
+.container {
+    width: 960px;
+    min-height: 400px;
+    margin: 0 auto;
+    border: 3px dashed orange;
+}
+
+li {
+    display: inline;            /* widht, height 적용 x */
+    /* display: inline-block; */      /* widht, height 적용 o */
+    /* inline        : 크기 x, 여백 o, 한줄 나란히 배치 */
+    /* block         : 크기 o, 여백 x, 세로로 쌓여서 배치 */
+    /* inline-block  : 크기 o, 여백 o 한 줄 나란히 배치*/
+    width: 150px;
+    height: 150px;
+    line-height: 50px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* 화면에 보이지 않게 지정 */
+.none { display: none;}
+.hidden { visibility: hidden;}
+
+/* grid */
+.grid-container {
+    display: grid;
+    /* 
+        grid-templates-columns
+        -Grid 레이아웃의 열의 크기를 지정하는 속성
+        (여기서는 3개의 열의 크기를 auto로 지정
+    */
+    grid-template-columns: auto auto auto;
+    background-color: royalblue;
+    padding: 10px;
+}
+.grid-container .item {
+    background-color: lightblue;
+    border: 1px solid #000;
+    /* padding: 20px; */
+    text-align: center;
+}
+
+/* flex */
+.flex-container { display: flex;}
+
+.flex-container .col{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.flex-container .item {
+    /* width: calc(100% /3 - 15px); */
+    height: auto;
+    box-sizing: border-box;
+}
+
+.item img { width: 100%; }

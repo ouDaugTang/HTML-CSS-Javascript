@@ -1,0 +1,34 @@
+* { margin: 0; padding: 0; }
+
+.ball {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: white;
+    background-color: royalblue;
+    border-radius: 50%;
+    
+    /* 애니매이션 */
+
+    animation-name: ball;                 
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
+
+@keyframes ball {
+    /* 시작시점 : from or 0% */
+    /* 종료시점 : to or 100% */
+
+    0% { left: 0; }
+    
+    50% { left: calc(100% - 200px); 
+        transform: rotate(360deg);
+    }
+
+    100% { left: 0; }
+    
+    
+}

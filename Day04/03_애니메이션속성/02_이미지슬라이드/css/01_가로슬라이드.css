@@ -1,0 +1,44 @@
+.container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    border: 10px solid black;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: calc(800px * 3);
+    animation-name: slide;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.slide img {
+    width: 800px;
+    height: 400px;
+    float: left;
+}
+
+@keyframes slide {
+    20% { 
+        left: 0;
+    }
+    40% { 
+        left: calc(-800px * 1);
+    }
+    60% { 
+        left: calc(-1600px * 1);
+    }
+    80%{
+        left: calc(-800px * 1);
+    }
+    100%{
+        left: 0;
+    }
+    
+    
+
+
+}
